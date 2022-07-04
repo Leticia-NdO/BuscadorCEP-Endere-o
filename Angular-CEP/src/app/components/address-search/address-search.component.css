@@ -1,0 +1,55 @@
+.section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.searcher{
+    display: flex;
+    margin-top: 30px;
+}
+
+.searcher input{
+    padding: 8px;
+    border-radius: 12px 0px 0px 12px;
+    border-width: 1px 0px 1px 1px;
+    border-color: lightgray;
+    border-style: solid;
+}
+
+.searcher button{
+    border-width: 1px 1px 1px 0px;
+    padding: 0px 10px;
+    border-radius: 0px 12px 12px 0px;
+    border-color: transparent;
+    border-style: solid;
+    background-color: rgb(129, 129, 129);
+    color: #fff;
+}
+
+.searcher button:hover{
+    background-color: rgb(76, 76, 76);
+
+}
+
+
+.retrievedData{
+    width: 30%;
+    border: 1px solid lightgrey;
+    background-color: #fff;
+    margin-top: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.retrievedData span{
+    color: rgb(76, 76, 76);
+}
+
+.retrievedData p{
+    font-size: 12pt;
+    border-width: 0px 0px 1px 0px;
+    border-color: lightgray;
+    border-style: solid;
+    padding: 5px;
+}

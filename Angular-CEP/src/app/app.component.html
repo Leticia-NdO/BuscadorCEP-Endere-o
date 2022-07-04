@@ -1,0 +1,14 @@
+<h1 *ngIf="address">BUSCADOR DE ENDEREÇO</h1>
+<h1 *ngIf="cep">BUSCADOR DE CEP</h1>
+<p class="link" (click)="switch()">Buscador de {{buscador}}</p>
+
+<p *ngIf="cep; else addressSearcher"></p>
+<p *ngIf="address; else cepSearcher"></p>
+
+<ng-template #addressSearcher>
+    <app-address-search></app-address-search>
+</ng-template>
+
+<ng-template #cepSearcher>
+    <app-cep-search></app-cep-search>
+</ng-template>

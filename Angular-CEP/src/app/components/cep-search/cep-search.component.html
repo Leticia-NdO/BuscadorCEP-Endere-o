@@ -1,0 +1,59 @@
+<div class="section">
+
+    <div class="searcher">
+
+
+        <select name="state" defaultValue="default" (change)="selectState($event)">
+            <option value="default">Selecione o estado</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+        </select>
+
+        <input (keyup)="keyCity($event)" placeholder="Digite o nome do município">
+        <!--keyup se refere "quando o usuário digitar". $event é o evento da digitação -->
+
+        <input (keyup)="keyStreet($event)" placeholder="Digite o nome da rua">
+        <span>PS: Seja o mais preciso o possível</span>
+        <button (click)="getAddress()">Enviar</button>
+
+    </div>
+
+    <p *ngIf="empty; else retrievedData"></p>
+
+    <ng-template #retrievedData>
+        <!-- tag especial do angular que recebe um nome como se fosse uma variável, é renderizada quando é chamada.-->
+        <div class="retrievedData" *ngFor="let address of receivedData">
+            <p>CEP: <span>{{address.cep}}</span></p>
+            <p>Estado: <span>{{address.uf}}</span></p>
+            <p>Município: <span>{{address.localidade}}</span></p>
+            <p>Bairro: <span>{{address.bairro}}</span></p>
+            <p>Rua: <span>{{address.logradouro}}</span></p>
+            <p>DDD: <span>{{address.ddd}}</span></p>
+        </div>
+    </ng-template>
+</div>

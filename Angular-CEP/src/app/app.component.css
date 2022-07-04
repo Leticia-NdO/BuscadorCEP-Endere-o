@@ -1,0 +1,18 @@
+h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-weight: 500;
+}
+
+.link{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(129, 129, 129);
+    background-color: none;
+}
+.link:hover{
+    color: rgb(76, 76, 76);
+    cursor: pointer;
+}

@@ -1,0 +1,23 @@
+<div class="section">
+
+    <div class="searcher">
+        <input (keyup)="onKey($event)" placeholder="Digite seu CEP">
+        <!--keyup se refere "quando o usuário digitar". $event é o evento da digitação -->
+        <button (click)="getCEP()">Enviar</button>
+
+    </div>
+
+    <p *ngIf="empty; else retrievedData"></p>
+
+    <ng-template #retrievedData>
+        <!-- tag especial do angular que recebe um nome como se fosse uma variável, é renderizada quando é chamada.-->
+        <div class="retrievedData">
+            <p>CEP: <span>{{data}}</span></p>
+            <p>Estado: <span>{{estado}}</span></p>
+            <p>Município: <span>{{municipio}}</span></p>
+            <p>Bairro: <span>{{bairro}}</span></p>
+            <p>Rua: <span>{{logradouro}}</span></p>
+            <p>DDD: <span>{{ddd}}</span></p>
+        </div>
+    </ng-template>
+</div>
