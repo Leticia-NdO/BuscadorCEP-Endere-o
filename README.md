@@ -1,4 +1,4 @@
-<h1 align="center">BuscadorCEP-Endereço</h1>
+<h1 align="center">Buscador-cep-endereço</h1>
 
 <h3 align="center">Sistema de busca de CEP por endereço e endereço por CEP</h3>
 
